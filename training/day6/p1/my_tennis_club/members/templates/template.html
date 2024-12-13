@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        {% for x in prices %}
+            <p>{{x}} + 10 : {{x|add:"10"}}</p>
+        {% endfor %}
+
+        {{ fruits|add:vegetables }}
+
+        {% for x in fruits|add:vegetables %}
+        <h1>{{forloop.counter}}. {{ x|add:" test" }} {% if forloop.first %}<span>Hmm</span>{% endif %} 
+            {% if forloop.last %}<span>Hmm</span>{% endif %}
+        </h1>
+        {% endfor %}
+
+        {% for k, v in mycar.items %}
+        <p>{{forloop.counter0}}. {{k}}: {{v}}</p>
+        {% endfor %}
+        <p>In views.py you can see what the fruits variable looks like.</p>
+    </body>
+</html>

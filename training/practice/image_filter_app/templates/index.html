@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Filter Application</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <select name="filter">
+            <option value="grayscale">Grayscale</option>
+            <option value="blur">Blur</option>
+            <option value="edge">Edge Detection</option>
+        </select>
+        <button type="submit">Apply Filter</button>
+    </form>
+</body>
+</html>
